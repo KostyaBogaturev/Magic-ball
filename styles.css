@@ -1,0 +1,84 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  background: radial-gradient(#08131f, #0e123d);
+
+}
+
+#magicBall {
+  position: relative;
+  width: 330px;
+  height: 330px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  background-image: url(images/ball.png);
+  background-size: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+#answerWindow {
+  transition: background 0.5s ease; 
+}
+
+
+.ball-textbox {
+  position: absolute;
+  box-sizing: border-box;
+  padding: 30px 13px 30px 17px;
+  text-align: center;
+  top: 80px;
+  left: 80px;
+  width: 175px;
+  height: 175px;
+}
+
+.ball-textbox-with-answer {
+  background-image: url(images/ball-hole.png);
+}
+
+.ball-textbox-eight {
+  background-image: url(images/8_circle.png);
+}
+
+.animated {
+  animation: shake 1s ease-in-out;
+}
+
+.ball-text {
+  display: inline-block;
+  position: relative;
+  font-size: 1.125rem;
+  color: #c6dcff;
+  line-height: 100px;
+  vertical-align: middle;
+  font-family: 'Noto Sans Armenian', 'Noto Sans', sans-serif;
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
